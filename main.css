@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: blue;
+}
+
+header h1 {
+    color: #fff;
+    padding: 8px;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+header nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.biografia {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: 24px;
+}
+
+.biografia p {
+    border-top: 4px solid blue;
+}
+
+.biografia img {
+    margin-right: 8px;
+}
+
+.produto h2 {
+    padding: 8px;
+    margin: 24px;
+}
+
+.produto img {
+    max-width: 100%;
+    margin-top: 8px;
+} 
+
+.produto ul {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    column-gap: 1%;
+    row-gap: 5%;
+    margin: 24px;
+    list-style: none;
+    border-top: 4px solid blue;
+}
+
+.produto li p {
+    margin-bottom: 8px;
+}
+
+button {
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+    .biografia {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .biografia img {
+        display: block;
+        font-size: 1.5em;
+        margin-right: 0;
+    }
+
+    .biografia h2 {
+        margin-top: 16px;
+    }
+
+    .biografia p {
+        margin-top: 16px;
+    }
+
+    .produto ul {
+        display: block;
+        margin-bottom: 32px;
+        padding-left: 0;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container {
+        max-width: 90%;
+    }
+
+    .biografia img {
+        font-size: 1.5em;
+    }
+
+    .produto ul {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+}
